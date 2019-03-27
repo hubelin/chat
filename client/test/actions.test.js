@@ -25,3 +25,16 @@ describe('adding second message', () => {
     expect(addMessage(message)).toEqual(action);
   });
 });
+
+describe('should fetch starwars API', () => {
+  it('fetchs starwars names', () => {
+    const mockStarwars = [
+      {
+        name: 'Luke'
+      },
+      {
+        name: 'Anakin'
+      }
+    ];
+  });
+});

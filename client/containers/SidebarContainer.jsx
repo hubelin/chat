@@ -6,6 +6,7 @@ const mapStateToProps = state => ({ users: state.users });
 
 const SidebarContainer = props => (
   <div>
+    <button>Click me!</button>
     <Sidebar users={props.users} />
   </div>
 );

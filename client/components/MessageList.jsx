@@ -5,7 +5,6 @@ import Message from './Message.jsx';
 const MessageList = ({ messages }) => (
   <section id="message-list">
     <ul>
-      {console.log(messages)}
       {messages.map(message => (
         <Message
           key={message.id}
