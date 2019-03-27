@@ -5,7 +5,7 @@ services:
     container_name: chat-dev-hot
     image: chat-dev
     ports:
-      - "8081:8080"
+      - "8080:8080"
     volumes:
       - ./:/usr/src/app
       - node_modules:/usr/src/app/node_modules
