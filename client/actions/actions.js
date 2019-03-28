@@ -15,3 +15,17 @@ export const addUser = name => ({
   id: nextUserId++,
   name
 });
+
+export const fetchSW = () => ({
+  type: types.FETCH_SW_LOAD
+});
+
+export const setSW = users => ({
+  type: types.FETCH_SW_SUCCESS,
+  users
+});
+
+export const errorSW = error => ({
+  type: types.FETCH_SW_FAIL,
+  error
+});

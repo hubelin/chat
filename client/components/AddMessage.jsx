@@ -1,5 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { showMessages } from '../socket';
+
+// onKeyPress={e => {
+//   if (e.key === 'Enter') {
+//     props.addMessage(input.value, 'Me');
+//     input.value = '';
+//   }
+// }}
+// type="text"
+// ref={node => (input = node)}
 
 const AddMessage = props => {
   let input;
@@ -8,7 +18,9 @@ const AddMessage = props => {
       <input
         onKeyPress={e => {
           if (e.key === 'Enter') {
-            props.addMessage(input.value, 'Me');
+            showMessages(input.value, (err, text) => {
+              console.log(text);
+            });
             input.value = '';
           }
         }}

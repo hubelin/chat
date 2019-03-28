@@ -28,15 +28,15 @@ module.exports = {
     // fallback to root for other urls
     historyApiFallback: true,
     inline: true,
-    headers: { 'Access-Control-Allow-Origin': '*' },
+    headers: { 'Access-Control-Allow-Origin': '*' }
     // proxy is required in order to make api calls to express server while using hot-reload webpack server
     // routes api fetch request from localhost:8080/api/* (webpack dev server) to localhost: 3000/api/* (where Express server is running)
-    proxy: {
-      '/**': {
-        target: 'http://localhost:3000/',
-        secure: false
-      }
-    }
+    // proxy: {
+    //   '/**': {
+    //     target: 'http://localhost:3000/',
+    //     secure: false
+    //   }
+    // }
   },
   module: {
     rules: [
